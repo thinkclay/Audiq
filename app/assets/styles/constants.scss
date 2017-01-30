@@ -1,0 +1,54 @@
+%clearfix {
+  &:after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+}
+
+%font_body {
+  font-family: 'Roboto', sans-serif;
+}
+
+%font_header {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+// Base Colors
+$base_light : #F4F0E8;
+$base_dark: #7C705F;
+$base_medium: #99896F;
+
+$base_3: #DCD2FF;
+$base_4: #DCD2FF;
+$base_6: #958CCD;
+$base_8: #544D7D;
+$base_9: #262271;
+$base_10: #1C0D46;
+$base_pink: #FF19BD;
+$base_pink_white: #FFD2F2;
+$base_pink_light: #D479BA;
+$base_pink_dark: #7F2A66;
+$base_yellow: #FFD447;
+// Brand Colors
+$brand_blue: rgb(68, 85, 166);
+$brand_green: rgb(139, 197, 98);
+$brand_teal: rgb(101, 195, 207);
+$brand_orange: rgb(233, 113, 50);
+$brand_yellow: rgb(227, 157, 42);
+$brand_red: rgb(167, 62, 79);
+$brand_pink: rgb(196, 118, 175);
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}

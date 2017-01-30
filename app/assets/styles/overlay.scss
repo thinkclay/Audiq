@@ -1,0 +1,74 @@
+.blur {
+  -webkit-filter: blur(1rem);
+  filter: blur(1rem);
+}
+
+.overlay {
+  background: transparentize($base_10, .08);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 900;
+
+  .close.icon {
+    background: transparent;
+    border: none;
+    color: $base_4;
+    cursor: pointer;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: -2rem;
+    top: -2rem;
+    transition: color .2s;
+
+    &:hover {
+      color: $base_8;
+    }
+  }
+
+  .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 5rem auto;
+    max-width: 60em;
+    width: 80%;
+
+    section {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 9rem;
+      bottom: 0;
+      overflow-y: scroll;
+    }
+
+
+    h1 {
+      border-bottom: 1px solid $base_3;
+      color: $base_8;
+      font-size: 4.6rem;
+      font-weight: 100;
+      line-height: 5rem;
+      margin: 0 -7rem;
+      padding: 0 7rem 2rem 7rem;
+    }
+
+    h2 {
+      font: 100 3rem/4.2rem 'Roboto Condensed', sans-serif;
+      margin: 0;
+      padding: 2rem 0 1rem;
+    }
+
+    p {
+      margin: 0;
+      padding: 0 0 1rem;
+    }
+  }
+}

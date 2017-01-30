@@ -1,0 +1,15 @@
+{
+  "name": "audiq",
+  "productName": "audiq",
+  "version": "0.0.1",
+  "description": "An media management tool",
+  "main": "./main.js",
+  "author": {
+    "name": "Clay Unicorn",
+    "email": "thinkclay@gmail.com",
+    "url": "https://github.com/thinkclay"
+  },
+  "license": "MIT",
+  "dependencies": {
+  }
+}
