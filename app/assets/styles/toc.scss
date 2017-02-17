@@ -1,91 +1,46 @@
 .page .toc {
-  &:before {
-    background-image: linear-gradient(to bottom, $base_10 0%, rgba(255, 255, 255, 0) 100%);
-    content: ' ';
+  .logo {
     display: block;
-    height: 2rem;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 15rem;
-    width: 100%;
-    z-index: 220;
-  }
-
-  &:after {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, $base_10 100%);
-    bottom: 0;
-    content: ' ';
-    display: block;
-    height: 2rem;
-    left: 0;
-    position: absolute;
-    right: 0;
-    width: 100%;
-    z-index: 220;
-  }
-
-  header {
-    padding-bottom: 3rem;
-    position: relative;
-
-    .label {
-      padding-top: 0;
-      top: 1.6rem;
-      position: absolute;
-    }
-
-    .search {
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      box-sizing: border-box;
-      color: $base_pink;
-      display: block;
-      font-size: 1.6rem;
-      font-weight: 100;
-      padding: 1.3rem 1rem 1rem 6.3rem;
-      position: relative;
-      width: 100%;
-    }
+    text-align: center;
   }
 
   .articles.list {
     bottom: 0;
     left: 0;
     overflow-y: scroll;
-    padding: 0 3rem;
     position: absolute;
     right: 0;
-    top: 15rem;
+    top: 9rem;
 
-    .chapters {
+    .folders {
       flex: 1;
-      padding: 2rem 0;
       overflow-y: scroll;
       z-index: 211;
     }
 
     dt {
+      color: #958CCD;
       font: 300 1.4rem/1 'Roboto Slab', serif;
-      padding: 1.5rem;
+      padding: 2.5rem 2rem 1.5rem;
     }
 
     dd {
       button {
-        background: #251C63;
-        border: 1px solid #3E2894;
-        border-radius: 3px;
-        color: rgba(255, 255, 255, 0.4);
+        color: #bac0cc;
         cursor: pointer;
         display: block;
+        font-weight: 300;
         line-height: 1.5rem;
-        margin: 1rem 0;
+        letter-spacing: .05rem;
         opacity: 0.5;
-        padding: 1.5rem;
+        padding: 1rem 2rem;
         text-align: left;
         transition: opacity .3s;
         width: 100%;
+
+        i {
+          padding-right: 1rem;
+        }
 
         &:hover {
           opacity: 1;
@@ -93,21 +48,8 @@
 
         &.selected {
           background: #7F2A66;
-          border-color: $base_pink;
-          color: $base_pink_light;
+          color: #FFD2F2;
           opacity: 1;
-        }
-
-        strong {
-          color: rgba(255, 255, 255, 0.7);
-          display: block;
-          font: 500 1.6rem/1.6rem 'Roboto Condensed', sans-serif;
-          letter-spacing: .03rem;
-          padding-bottom: 1rem;
-        }
-
-        span {
-          font: 300 1.1rem/1.8rem 'Roboto', sans-serif;
         }
       }
     }

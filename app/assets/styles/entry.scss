@@ -1,6 +1,111 @@
 section.content {
-  .button.browse {
-    float: right;
+  .search {
+    background: #fff;
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.1);
+    height: 5rem;
+    position: relative;
+
+    i {
+      font-size: 1.4rem;
+      left: 3rem;
+      position: absolute;
+      top: 1.9rem;
+    }
+
+    input {
+      border: none;
+      color: #787c87;
+      display: block;
+      font-size: 1.5rem;
+      height: 4.8rem;
+      left: 5rem;
+      line-height: 1;
+      padding: 0 0 0 1rem;
+      position: absolute;
+      right: 0;
+      top: .2rem;
+      width: 100%;
+    }
+  }
+
+  .options {
+    background: #f5f7f9;
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.1);
+    height: 5rem;
+  }
+
+  .inner {
+    padding: 2rem 3rem;
+  }
+
+  .results {
+    li {
+      @extend %clearfix;
+      background: #fff;
+      border-radius: .2rem;
+      box-shadow: 0 .1rem .2rem rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      margin: 1rem 0;
+      min-height: 5rem;
+      padding: 1.2rem;
+      position: relative;
+
+      &::after {
+        background: #fff;
+        border-bottom-left-radius: .2rem;
+        border-top-left-radius: .2rem;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+      }
+
+      &:hover {
+        &::after {
+          background: #dde8ef;
+        }
+      }
+
+      &.selected {
+        &::after {
+          background-image: linear-gradient(-180deg, #99b0f1 0%, #ca7fe9 100%);
+        }
+      }
+
+      img {
+        border: 1px solid #fff;
+        box-shadow: 0 .1rem .2rem rgba(0, 0, 0, 0.1);
+        float: left;
+        margin: 0 1.5rem 0 .3rem;
+        width: 5rem;
+      }
+
+      .title, .meta, .tags {
+        display: block;
+        padding: .3rem 0 0;
+      }
+
+      .title {
+        color: #464d5d;
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+
+      .meta {
+        color: #818ca4;
+        font-size: 1.1rem;
+      }
+
+      .tags {
+        color: #d3dae2;
+        font-size: 1.1rem;
+
+        .tag {
+          padding-right: 1rem;
+        }
+      }
+    }
   }
 
   blockquote {
@@ -57,10 +162,6 @@ section.content {
     }
   }
 
-  code {
-    color: $brand_pink;
-  }
-
   &.cover {
     text-align: center;
 
@@ -102,11 +203,4 @@ section.content {
       }
     }
   }
-}
-
-aside.meta {
-  float: right;
-  padding: 2.5rem;
-  width: 30%;
-  box-sizing: border-box;
 }

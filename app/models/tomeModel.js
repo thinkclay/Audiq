@@ -1,7 +1,6 @@
 
 export type topic = {
   title: string,
-  description: string,
   content: string
 };
 

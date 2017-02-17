@@ -6,7 +6,7 @@ import shortid from 'shortid';
 import * as tomeActions from '../actions/tomeActions';
 import * as tomeModel from '../models/tomeModel';
 
-class TableOfContents extends Component {
+class Tree extends Component {
   componentDidMount() {
     this.props.topicSelect(0, 0);
   }
@@ -26,16 +26,20 @@ class TableOfContents extends Component {
   ));
 
   renderTopics = (topics, chapter) => topics.map((topic, index) => (
-    <button key={shortid.generate()} className={topic.selected ? 'selected' : ''} onClick={() => this.props.topicSelect(index, chapter)}>
-      <strong>{topic.title}</strong>
-      <span>{topic.description}</span>
+    <button
+      key={shortid.generate()}
+      className={topic.selected ? 'selected' : ''}
+      onClick={() => this.props.topicSelect(index, chapter)}
+    >
+      <i className="fa fa-folder-open-o" />
+      {topic.title}
     </button>
   ));
 
   render() {
     return (
       <nav className="articles list">
-        <div className="chapters">
+        <div className="folders">
           {this.props.tome ? this.renderChapters(this.props.tome.all) : null}
         </div>
       </nav>
@@ -52,4 +56,4 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = (dispatch) => bindActionCreators(tomeActions, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(TableOfContents);
+export default connect(mapStateToProps, mapDispatchToProps)(Tree);

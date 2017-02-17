@@ -3,7 +3,6 @@
 @import 'constants';
 @import 'elements';
 @import 'forms';
-@import 'navigation';
 @import 'overlay';
 @import 'entry';
 @import 'toc';
@@ -17,32 +16,25 @@
   position: relative;
 
   aside {
-    background: $base_10;
+    background: #212640;
     box-sizing: border-box;
     float: left;
     height: 100%;
-    padding: 8rem 3rem 0;
+    padding: 2rem;
     position: relative;
-    width: 25%;
-
-    &.meta {
-      float: right;
-    }
+    width: 36rem;
   }
 
   section.content {
-    background: #27135C;
-    border-left: 1px solid #372072;
-    border-right: 1px solid #372072;
+    background: #f0f3f6;
     bottom: 0;
+    box-shadow: 0 0 .5rem #000;
     top: 0;
-    box-shadow: inset 0 -1rem 1rem #30186C, 0 0 1.5rem 0 rgba(0, 0, 0, 0.6);
     box-sizing: border-box;
     float: left;
-    left: 25%;
-    padding: 8rem 3rem 0;
+    left: 36rem;
     position: absolute;
-    width: 50%;
+    right: 0;
     z-index: 300;
   }
 }
